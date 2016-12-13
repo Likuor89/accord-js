@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>testAccord</title>
+  <link rel="stylesheet" href="./master.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="title">
+    <b>тестовый <img src="./logo.png" alt="accord" class="title-img"> аккордеон</b>
+  </div>
+  <ul class="accord">
+    <li class="accord__item">
+      <a href="#" class="accord__trigger">Derzkie kengury</a>
+      <div class="accord__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, voluptatibus.</div>
+    </li>
+    <li class="accord__item">
+      <a href="#" class="accord__trigger">Gangsta kengury</a>
+      <div class="accord__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium et quibusdam accusantium quae dignissimos neque ex asperiores, a est. Illo!</div>
+    </li>
+    <li class="accord__item">
+      <a href="#" class="accord__trigger">Opastnie kengury</a>
+      <div class="accord__content">Lorem ipsum dolor sit amet.</div>
+    </li>
+    <li class="accord__item">
+      <a href="#" class="accord__trigger">Smertelnie tarantyli</a>
+      <div class="accord__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, voluptatibus.</div>
+    </li>
+    <li class="accord__item">
+      <a href="#" class="accord__trigger">Tarantula</a>
+      <div class="accord__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id aliquid corporis eum minima dolorum provident, officia voluptatibus enim obcaecati a.</div>
+    </li>
+    <li class="accord__item">
+      <a href="#" class="accord__trigger">Monstro tarantyli</a>
+      <div class="accord__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae consequuntur, nam nemo non. Sit, laudantium?</div>
+    </li>
+  </ul>
+</div>
+<script type="text/javascript">
+var toggles = document.querySelectorAll('.accord__trigger');
+var _onClick = function(event) {
+    var elem = event.target;
+    var parent = elem.closest('.accord__item');
+    var items = document.querySelectorAll('.accord__item');
+    for (var item of items) {
+        item.classList.remove('active');
+    };
+    parent.classList.toggle('active');
+};
+for (var toggle of toggles) {
+    toggle.addEventListener('click', _onClick);
+};
+</script>
+</body>
+</html>
